@@ -1,6 +1,6 @@
 # Radiant-Maze
 
-This is a first person shooter puzzle game developped in an academic setting
+This is a first person puzzle game developped in an academic setting
 
 ## Objectives
 
