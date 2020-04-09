@@ -2,6 +2,8 @@
 
 This is a first person puzzle game developped in an academic setting
 
+![Game screenshot](/radiant_maze_screenshot.png)
+
 ## Objectives
 
 Collect the Christmas trees and reach the final room of the labyrinth
