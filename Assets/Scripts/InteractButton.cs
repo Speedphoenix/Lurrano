@@ -92,7 +92,7 @@ public class InteractButton : MonoBehaviour
         if (otherCollider != playerCollider)
             return;
 
-        if (Input.GetKeyDown(interactKey))
+        if (GameInputManager.getKeyDown(GameInputManager.InputType.Interact))
         {
             isInteracting = true;
         }

@@ -34,16 +34,20 @@ public class ColorController : MonoBehaviour
 
     [SerializeField] private bool isStack = false;
 
-    [SerializeField] private float defaultColorDuration = 4;
+    [SerializeField] private float defaultColorDuration = 6;
+    [SerializeField] private float timeAcceleration = 2;
 
     // this must be in seconds
-    [SerializeField] public float MAXHOURGLASSDURATION = 12;
+    [SerializeField] public float MAXHOURGLASSDURATION = 20;
 
     // this is to be seen by the inspector, and will be converted to a dictionary at Start
     [SerializeField] private NamedMaterial[] neonMaterialList = default;
 
     [SerializeField] private NamedMaterial[] wallMaterialList = default;
     [SerializeField] private GameObject fullLaby = null;
+
+    private bool isAccelerated = false;
+
     private List<Renderer> wallList = new List<Renderer>();
     private Dictionary<ColorType, Material> wallMaterialDictionary = new Dictionary<ColorType, Material>();
 
@@ -139,6 +143,12 @@ public class ColorController : MonoBehaviour
             Application.Quit(); // replace this with a proper throw statement
         else
             instance = this;
+    }
+
+    void OnDisable()
+    {
+        if (instance != null)
+            instance = null;
     }
 
     // Start is called before the first frame update
@@ -257,9 +267,18 @@ public class ColorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         float timeToReduce = Time.deltaTime;
         bool done = false;
         bool changed = false;
+
+        if (GameInputManager.getKeyDown(GameInputManager.InputType.AccelerateTime))
+            isAccelerated = true;
+        if(GameInputManager.getKeyUp(GameInputManager.InputType.AccelerateTime))
+            isAccelerated = false;
+
+        if (isAccelerated)
+            timeToReduce *= timeAcceleration;
 
         while (!done && currentQueue.Count != 0)
         {
@@ -299,4 +318,10 @@ public class ColorController : MonoBehaviour
                 return "NoColor";
         }
     }
+
+    void OnApplicationQuit()
+    {
+        instance = null;
+    }
+
 }

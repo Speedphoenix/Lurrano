@@ -6,16 +6,12 @@ public class PlayerMove : MonoBehaviour
 {
     static PlayerMove instance = null;
     [SerializeField] private Collider playerCollider;
-    [SerializeField] private string HorizontalInputName;
-    [SerializeField] private string VerticalInputName;
     [SerializeField] private float playerSpeed;
 
     private CharacterController charController;
 
     [SerializeField] private AnimationCurve jumpFallOff;
     [SerializeField] private float jumpMultiplier;
-    [SerializeField] private KeyCode jumpKey;
-    [SerializeField] private KeyCode sprintKey;
     [SerializeField] private float sprintMultiplier;
     public AudioSource footsteps;
 
@@ -41,8 +37,8 @@ public class PlayerMove : MonoBehaviour
 
     private void PlayerMovement()
     {
-        float horizInput = Input.GetAxis(HorizontalInputName) * playerSpeed;
-        float vertInput = Input.GetAxis(VerticalInputName) * playerSpeed;
+        float horizInput = GameInputManager.getAxis(GameInputManager.Axis.Horizontal) * playerSpeed;
+        float vertInput = GameInputManager.getAxis(GameInputManager.Axis.Vertical) * playerSpeed;
 
         Vector3 fowardMovement;
         Vector3 rightMovement;
@@ -67,7 +63,7 @@ public class PlayerMove : MonoBehaviour
 
     private void JumpInput()
     {
-        if (Input.GetKeyDown(jumpKey) && !isJumping == true)
+        if (GameInputManager.getKeyDown(GameInputManager.InputType.Jump) && isJumping != true)
         {
             isJumping = true;
             StartCoroutine(JumpEvent());
@@ -92,16 +88,25 @@ public class PlayerMove : MonoBehaviour
 
     private void SprintInput()
     {
-        if (Input.GetKeyDown(sprintKey) && !isSprinting == true)
+        if (GameInputManager.getKeyDown(GameInputManager.InputType.Sprint) && isSprinting != true)
         {
             isSprinting = true;
         }
 
-        if(Input.GetKeyUp(sprintKey) && isSprinting == true)
+        if(GameInputManager.getKeyUp(GameInputManager.InputType.Sprint) && isSprinting == true)
         {
             isSprinting = false;
         }
-
     }
 
+    void OnDisable()
+    {
+        if (instance != null)
+            instance = null;
+    }
+
+    void OnApplicationQuit()
+    {
+        instance = null;
+    }
 }

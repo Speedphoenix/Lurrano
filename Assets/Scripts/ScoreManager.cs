@@ -20,23 +20,13 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-
         scoreCount = startScore;
         countText.text = scoreText + " " + scoreCount.ToString();
-
     }
 
     public void addToScore(int toAdd)
     {
         scoreCount += toAdd;
-    }
-
-    void OnEnable()
-    {
-        if (instance != null)
-            Application.Quit(); // replace this with a proper throw statement
-        else
-            instance = this;
     }
 
     void OnTriggerEnter(Collider otherCollider)
@@ -48,9 +38,24 @@ public class ScoreManager : MonoBehaviour
         scoreCount += scoreIncrement;
         countText.text = scoreText + " " + scoreCount.ToString();
         other.SetActive(false);
-        
     }
 
-  
+    void OnEnable()
+    {
+        if (instance != null)
+            Application.Quit(); // replace this with a proper throw statement
+        else
+            instance = this;
+    }
 
+    void OnDisable()
+    {
+        if (instance != null)
+            instance = null;
+    }
+
+    void OnApplicationQuit()
+    {
+        instance = null;
+    }
 }

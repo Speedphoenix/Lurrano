@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStack: 0
   defaultColorDuration: 6
+  timeAcceleration: 4
   MAXHOURGLASSDURATION: 20
   neonMaterialList:
   - colorName: 0
@@ -148,6 +149,8 @@ MonoBehaviour:
     colorMaterial: {fileID: 2100000, guid: bcf96a906a420b24abfa3c2258de2eae, type: 2}
   - colorName: 4
     colorMaterial: {fileID: 2100000, guid: b10562c644d604647b81c921cc6c6163, type: 2}
+  wallMaterialList: []
+  fullLaby: {fileID: 0}
   currentGlobalCol: 0
   colorList:
   - colortype: 0
@@ -169,6 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7128029622175430973}
+  - component: {fileID: 3631707405195161589}
   m_Layer: 0
   m_Name: GlobalObject
   m_TagString: Untagged
@@ -194,6 +198,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3631707405195161589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7128029622175430972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6d94b97aedebf7eab54a13a449b69c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorizontalInputName: Horizontal
+  VerticalInputName: Vertical
+  WASDHorizontalInputName: HorizontalWASD
+  WASDVerticalInputName: VerticalWASD
+  jumpKey: 0
+  sprintKey: 304
+  interactKey: 101
+  accelerateKey: 304
 --- !u!1 &7281187601196063979
 GameObject:
   m_ObjectHideFlags: 0
