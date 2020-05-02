@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -119,15 +119,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11404237074883128, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 533589329131167050, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 533589329131167050, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 533589329131167050, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953554926729641752, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953554927598797898, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1953554927842164546, guid: 91f9eaf945725df40a704b1804c2fc41,
         type: 3}
       propertyPath: m_Name
       value: Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 1953554927842164546, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1953554927842164547, guid: 91f9eaf945725df40a704b1804c2fc41,
         type: 3}
@@ -184,95 +209,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1953554926729641752, guid: 91f9eaf945725df40a704b1804c2fc41,
+    - target: {fileID: 5978270996730365262, guid: 91f9eaf945725df40a704b1804c2fc41,
         type: 3}
-      propertyPath: m_LocalPosition.z
+      propertyPath: m_text
+      value: Collect all Christmas Trees!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113222958347097678, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4106633922246603547, guid: 91f9eaf945725df40a704b1804c2fc41,
+    - target: {fileID: 6113222958347097678, guid: 91f9eaf945725df40a704b1804c2fc41,
         type: 3}
-      propertyPath: m_textInfo.characterCount
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113222958347097678, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929916478233481370, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4106633922246603547, guid: 91f9eaf945725df40a704b1804c2fc41,
+    - target: {fileID: 6929916478233481370, guid: 91f9eaf945725df40a704b1804c2fc41,
         type: 3}
-      propertyPath: m_textInfo.wordCount
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929916478233481370, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892827989638835951, guid: 91f9eaf945725df40a704b1804c2fc41,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4106633922246603547, guid: 91f9eaf945725df40a704b1804c2fc41,
+    - target: {fileID: 8892827989638835951, guid: 91f9eaf945725df40a704b1804c2fc41,
         type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4106633922246603547, guid: 91f9eaf945725df40a704b1804c2fc41,
+    - target: {fileID: 8892827989638835951, guid: 91f9eaf945725df40a704b1804c2fc41,
         type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810611258845781006, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810611258845781006, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810611258845781006, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810611258845781006, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265066558433683203, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265066558433683203, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265066558433683203, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265066558433683203, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731783236613817829, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731783236613817829, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731783236613817829, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731783236613817829, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2731783236613817829, guid: 91f9eaf945725df40a704b1804c2fc41,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
+      propertyPath: m_sharedMaterial
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f9eaf945725df40a704b1804c2fc41, type: 3}
@@ -283,11 +268,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3572246575020520973, guid: 16b330e8d4f7bad41879e55ac740111a,
-        type: 3}
-      propertyPath: m_Name
-      value: EventSystem
-      objectReference: {fileID: 0}
     - target: {fileID: 3572246575020520968, guid: 16b330e8d4f7bad41879e55ac740111a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -342,6 +322,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572246575020520973, guid: 16b330e8d4f7bad41879e55ac740111a,
+        type: 3}
+      propertyPath: m_Name
+      value: EventSystem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b330e8d4f7bad41879e55ac740111a, type: 3}
