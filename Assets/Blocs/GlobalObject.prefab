@@ -135,9 +135,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStack: 0
-  defaultColorDuration: 6
+  defaultColorDuration: 12
   timeAcceleration: 4
-  MAXHOURGLASSDURATION: 20
+  MAXHOURGLASSDURATION: 36
   neonMaterialList:
   - colorName: 0
     colorMaterial: {fileID: 2100000, guid: 32374858549945c4ca7ace86abcc1ad3, type: 2}
@@ -149,20 +149,30 @@ MonoBehaviour:
     colorMaterial: {fileID: 2100000, guid: bcf96a906a420b24abfa3c2258de2eae, type: 2}
   - colorName: 4
     colorMaterial: {fileID: 2100000, guid: b10562c644d604647b81c921cc6c6163, type: 2}
-  wallMaterialList: []
+  wallMaterialList:
+  - colorName: 0
+    colorMaterial: {fileID: 2100000, guid: 02d8a53286b5a8b4a8fbd6317876a5d3, type: 2}
+  - colorName: 1
+    colorMaterial: {fileID: 2100000, guid: 1e07f99faf013474dace6378e5652bf7, type: 2}
+  - colorName: 2
+    colorMaterial: {fileID: 2100000, guid: 51218dc33f25a964597b80205d0854f7, type: 2}
+  - colorName: 3
+    colorMaterial: {fileID: 2100000, guid: 18351ac9c4541cc4e8bfe07a8d7999db, type: 2}
+  - colorName: 4
+    colorMaterial: {fileID: 2100000, guid: 739aeea145e15a7409ddd5f7dee833de, type: 2}
   fullLaby: {fileID: 0}
   currentGlobalCol: 0
   colorList:
   - colortype: 0
-    color: {r: 1, g: 1, b: 1, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
   - colortype: 1
-    color: {r: 1, g: 0, b: 0, a: 0}
+    color: {r: 1, g: 0, b: 0, a: 1}
   - colortype: 3
-    color: {r: 0, g: 0, b: 1, a: 0}
+    color: {r: 0, g: 0, b: 1, a: 1}
   - colortype: 4
-    color: {r: 0, g: 1, b: 0, a: 0}
+    color: {r: 0, g: 1, b: 0, a: 1}
   - colortype: 2
-    color: {r: 1, g: 1, b: 0, a: 0}
+    color: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &7128029622175430972
 GameObject:
   m_ObjectHideFlags: 0

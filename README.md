@@ -20,7 +20,7 @@ Activating multiple buttons one after the other will enqueue the various tempora
 
 ## Controls
 - <kbd>z</kbd><kbd>q</kbd><kbd>s</kbd><kbd>d</kbd> to move around
-> You can change this to <kbd>w</kbd><kbd>a</kbd><kbd>s</kbd><kbd>d</kbd> in the *controls* section of the main menu
+> You can change this to <kbd>w</kbd><kbd>a</kbd><kbd>s</kbd><kbd>d</kbd> in the *controls* section of the main menu (bottom right)
 - <kbd>e</kbd> to interact with buttons
 - Left <kbd>Shift</kbd> to accelerate the speed at which the remaining temporary color decreases
 - Use the mouse to look around

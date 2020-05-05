@@ -292,6 +292,7 @@ public class ColorController : MonoBehaviour
             else
             {
                 float removedTime = topCol.remainingTime;
+
                 currentQueue.RemoveAt(ActiveColorIndex);
                 changed = true;
                 timeToReduce -= removedTime;

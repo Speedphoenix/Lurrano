@@ -16,7 +16,7 @@ public class TreeAnimate : MonoBehaviour
         foreach(MeshFilter el in GetComponentsInChildren(typeof(MeshFilter)))
         {
             GameObject toAdd = el.gameObject;
-            if (toAdd.name == "Trunk" || toAdd.name == "Ornament")
+            if (toAdd.name != "Quad")
                 continue;
             quadList.Add(toAdd.GetComponent<Transform>());
         }
