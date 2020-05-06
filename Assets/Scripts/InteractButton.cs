@@ -5,19 +5,15 @@ using ColorType = ColorController.ColorType;
 
 public class InteractButton : MonoBehaviour
 {
-    private GameObject player;
-    [SerializeField] private KeyCode interactKey = KeyCode.E;
 
     // [SerializeField] private string facingDirection;
-    [Range(0.00f, 1.00f)] public float AudioSourceVolume;
-    [SerializeField] private ColorType colorName = ColorType.NoColor;
+    [Range(0.00f, 1.00f)] public float AudioSourceVolume = 0.05F;
     [SerializeField] private int timerDuration = 35;
     public GameObject button = null;
     public AudioSource pressureSoundSource;
     private double pushedDistance = 0.15;
     private bool isInteracting;
     private bool push;
-    private Collider playerCollider;
     private int timer;
 
     Vector3 pushTravel = new Vector3(0, 0, 0);
@@ -26,8 +22,6 @@ public class InteractButton : MonoBehaviour
     void Start()
     {
         // StartFacing();
-        player = GameObject.FindWithTag("Player");
-        playerCollider = player.GetComponent<Collider>();
         pressureSoundSource.volume = AudioSourceVolume;
         pressureSoundSource.spatialBlend = 1;
         isInteracting = false;
@@ -84,12 +78,11 @@ public class InteractButton : MonoBehaviour
     // this will be overridden by other buttons
     protected virtual void externalAction()
     {
-        ColorController.instance.enqueueNewCol(colorName);
     }
 
     void OnTriggerStay(Collider otherCollider)
     {
-        if (otherCollider != playerCollider)
+        if (otherCollider.gameObject.tag != "Player")
             return;
 
         if (GameInputManager.getKeyDown(GameInputManager.InputType.Interact))

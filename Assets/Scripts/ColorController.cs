@@ -214,6 +214,9 @@ public class ColorController : MonoBehaviour
     {
         bool done = false;
 
+        if (newCol == ColorType.NoColor)
+            return;
+
         if (currentQueue.Count > 0)
         {
             // this seems to duplicate it

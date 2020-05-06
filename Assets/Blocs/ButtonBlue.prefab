@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 2541687685296486937}
   - component: {fileID: 3821104692594094513}
   - component: {fileID: 573177082774528848}
+  - component: {fileID: 7487917805296398131}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -184,6 +185,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7487917805296398131
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5473399614081080281}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7055604660705057010
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,8 +215,7 @@ GameObject:
   - component: {fileID: 7055604660705057022}
   - component: {fileID: 7055604660705057021}
   - component: {fileID: 7055604660705057016}
-  - component: {fileID: 7055604660705057017}
-  - component: {fileID: 4769469032725973561}
+  - component: {fileID: 114579916212632464}
   - component: {fileID: 8511116418705107716}
   m_Layer: 0
   m_Name: ButtonBlue
@@ -300,24 +316,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7055604660705057017
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2532752766164870852, guid: 123f0023d130e6c40a657e99dae6dfef,
-    type: 3}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7055604660705057010}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &4769469032725973561
+--- !u!114 &114579916212632464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,16 +325,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7055604660705057010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e306ec4cf9968b64da27f1a3c58ecd56, type: 3}
+  m_Script: {fileID: 11500000, guid: 145f12c1909c88617b49135cce2d2e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactKey: 101
-  buttonCollider: {fileID: 7055604660705057021}
   AudioSourceVolume: 0.05
-  colorName: 3
-  timerDuration: 50
+  timerDuration: 35
   button: {fileID: 2838983065314730236}
   pressureSoundSource: {fileID: 8511116418705107716}
+  colorName: 3
 --- !u!82 &8511116418705107716
 AudioSource:
   m_ObjectHideFlags: 0

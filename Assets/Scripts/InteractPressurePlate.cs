@@ -19,7 +19,7 @@ public class InteractPressurePlate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerCollider = PlayerMove.GlobalPlayerCollider;
+        playerCollider = PlayerMove.MainPlayerCollider;
         push = false;
         pressureSoundSource.volume = AudioSourceVolume;
         pressureSoundSource.spatialBlend = 1;

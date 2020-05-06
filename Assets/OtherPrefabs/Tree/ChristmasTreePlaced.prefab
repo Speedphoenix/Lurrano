@@ -7,11 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4641370656942386822, guid: b4b65e624453089c389c33b9b62d5e54,
-        type: 3}
-      propertyPath: m_Name
-      value: ChristmasTree 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3578196084790659848, guid: b4b65e624453089c389c33b9b62d5e54,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -81,6 +76,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641370656942386822, guid: b4b65e624453089c389c33b9b62d5e54,
+        type: 3}
+      propertyPath: m_Name
+      value: ChristmasTreePlaced
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4b65e624453089c389c33b9b62d5e54, type: 3}

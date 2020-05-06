@@ -16,7 +16,7 @@ public class InteractWall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerCollider = PlayerMove.GlobalPlayerCollider;
+        playerCollider = PlayerMove.MainPlayerCollider;
         push = false;
         isInteracting = false;
     }

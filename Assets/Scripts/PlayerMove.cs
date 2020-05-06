@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     static PlayerMove instance = null;
-    [SerializeField] private Collider playerCollider;
+    [SerializeField] private Collider mainPlayerCollider;
     [SerializeField] private float playerSpeed;
 
     private CharacterController charController;
@@ -18,15 +18,24 @@ public class PlayerMove : MonoBehaviour
     private bool isJumping;
     private bool isSprinting;
 
-    public static Collider GlobalPlayerCollider
+    public static Collider MainPlayerCollider
     {
-        get { return instance.playerCollider; }
+        get { return instance.mainPlayerCollider; }
+    }
+
+    void OnEnable()
+    {
+        instance = this;
+    }
+
+    void OnDisable()
+    {
+        if (instance != null)
+            instance = null;
     }
 
     private void Awake()
     {
-        instance = this;
-
         charController = GetComponent<CharacterController>();
     }
 
@@ -97,12 +106,6 @@ public class PlayerMove : MonoBehaviour
         {
             isSprinting = false;
         }
-    }
-
-    void OnDisable()
-    {
-        if (instance != null)
-            instance = null;
     }
 
     void OnApplicationQuit()

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public AudioClip treefx;
     public static ScoreManager instance;
     [SerializeField] private Text countText;
     [SerializeField] private int scoreIncrement = 1;
@@ -27,17 +26,12 @@ public class ScoreManager : MonoBehaviour
     public void addToScore(int toAdd)
     {
         scoreCount += toAdd;
+        countText.text = scoreText + " " + scoreCount.ToString();
     }
 
-    void OnTriggerEnter(Collider otherCollider)
+    public void incrementScore()
     {
-        GameObject other = otherCollider.gameObject;
-        if (other.tag != "Objective")
-            return;
-        AudioSource.PlayClipAtPoint(treefx, other.transform.position, 0.1f);
-        scoreCount += scoreIncrement;
-        countText.text = scoreText + " " + scoreCount.ToString();
-        other.SetActive(false);
+        addToScore(scoreIncrement);
     }
 
     void OnEnable()
