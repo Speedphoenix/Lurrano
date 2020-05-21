@@ -6,12 +6,16 @@ using UnityEngine;
 public class ObjectiveScorer : MonoBehaviour
 {    
 
-    [SerializeField] private AudioClip treefx;
-    private Collider mainPlayerCollider;
+    [SerializeField] private AudioClip treefx = null;
+    [SerializeField] private bool isFinal = false;
+    private Collider mainPlayerCollider = null;
     
     void Start()
     {
         mainPlayerCollider = PlayerMove.MainPlayerCollider;
+
+        // this is so the HUDMenuController knows how many objectives there are
+        HUDMenuController.addObjective(isFinal);
     }
 
     void OnTriggerStay(Collider otherCollider)
@@ -33,7 +37,7 @@ public class ObjectiveScorer : MonoBehaviour
     protected void externalAction()
     {
         AudioSource.PlayClipAtPoint(treefx, gameObject.transform.position, 0.1f);
-        ScoreManager.instance.incrementScore();
+        ScoreManager.instance.incrementScore(isFinal);
         gameObject.SetActive(false);
     }
 }

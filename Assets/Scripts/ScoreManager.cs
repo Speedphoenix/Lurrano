@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;
-    [SerializeField] private Text countText;
+    public static ScoreManager instance = null;
+    [SerializeField] private Text countText = null;
     [SerializeField] private int scoreIncrement = 1;
     [SerializeField] private int startScore = 0;
     private int scoreCount = 0;
@@ -29,9 +29,11 @@ public class ScoreManager : MonoBehaviour
         countText.text = scoreText + " " + scoreCount.ToString();
     }
 
-    public void incrementScore()
+    public void incrementScore(bool isFinal)
     {
         addToScore(scoreIncrement);
+        if (isFinal)
+            HUDMenuController.caughtNewFinal();
     }
 
     void OnEnable()

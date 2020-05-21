@@ -41,6 +41,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
+        if (ColorController.instance.IsPaused)
+            return;        
         PlayerMovement();
     }
 

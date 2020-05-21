@@ -12,18 +12,35 @@ public class PlayerLook : MonoBehaviour
 
     private float XAxisClamp;
 
-    private void Awake()
+    private void OnEnable()
     {
         LockCursor();
         XAxisClamp = 0.0f;
+        ColorController.onPause += UnlockCursor;
+        ColorController.onUnPause += LockCursor;
     }
+
+    private void OnDisable()
+    {
+        UnlockCursor();
+        ColorController.onPause -= UnlockCursor;
+        ColorController.onUnPause -= LockCursor;
+    }
+
     private void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     private void Update()
     {
+        if (ColorController.instance.IsPaused)
+            return;
         CameraRotation();
     }
 

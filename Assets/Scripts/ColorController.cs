@@ -32,6 +32,13 @@ public class ColorController : MonoBehaviour
         public Color color;
     }
 
+    [SerializeField] private bool isPaused = false;
+    public delegate void OnPause();
+    public static OnPause onPause;
+    public static OnPause onUnPause;
+
+    private float gameTimer = 0f;
+
     [SerializeField] private bool isStack = false;
 
     [SerializeField] private float defaultColorDuration = 6;
@@ -88,6 +95,24 @@ public class ColorController : MonoBehaviour
                 return el.color;
         }
         return Color.white;
+    }
+
+    public bool IsPaused
+    {
+        get { return isPaused; }
+        set
+        {
+            isPaused = value;
+            if (isPaused && onPause != null)
+                onPause();
+            if (!isPaused && onUnPause != null)
+                onUnPause();
+        }
+    }
+
+    public float GameTimer
+    {
+        get { return gameTimer; }
     }
 
     public ColorType CurrentCol
@@ -270,7 +295,12 @@ public class ColorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPaused)
+            return;
+
+        // only if it's not paused
+        gameTimer += Time.deltaTime;
+    
         float timeToReduce = Time.deltaTime;
         bool done = false;
         bool changed = false;

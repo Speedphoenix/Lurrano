@@ -45,23 +45,18 @@ public class GameInputManager : MonoBehaviour
         {
             case InputType.Interact:
                 return interactKey;
-                break;
 
             case InputType.Jump:
                 return jumpKey;
-                break;
 
             case InputType.Sprint:
                 return sprintKey;
-                break;
 
             case InputType.AccelerateTime:
                 return accelerateKey;
-                break;
             
             default:
                 return KeyCode.None;
-                break;
         }
     }
 
@@ -86,12 +81,14 @@ public class GameInputManager : MonoBehaviour
                 else
                     inputName = instance.WASDVerticalInputName;
                 break;
+
             case Axis.Horizontal:
                 if (!isWASD)
                     inputName = instance.HorizontalInputName;
                 else
                     inputName = instance.WASDHorizontalInputName;
                 break;
+                
             default:
                 break;
         }

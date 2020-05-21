@@ -6,13 +6,11 @@ public class MainMenu : MonoBehaviour
 {
     public void playGame()
     {
-        Debug.Log("salut !");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
     {
-        Debug.Log("QUIT");
         Application.Quit();
     }
 }

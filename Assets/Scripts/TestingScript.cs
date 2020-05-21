@@ -5,7 +5,7 @@ using ColorType = ColorController.ColorType;
 
 public class TestingScript : MonoBehaviour
 {
-    GameObject testingWall;
+/*    GameObject testingWall;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,12 @@ public class TestingScript : MonoBehaviour
     private void onColorChange(ColorType newCol)
     {
         testingWall.GetComponent<Renderer>().material.SetColor("_Color", ColorController.getColorFromType(newCol));
+    }
+*/
+    
+    public void justPrint()
+    {
+        Debug.Log("Hey there!");
     }
 
     /*

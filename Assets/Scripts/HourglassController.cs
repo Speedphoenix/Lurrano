@@ -86,7 +86,7 @@ public class HourglassController : MonoBehaviour
 
         updateChunks();
 
-        borders = GetComponentsInChildren<Image>();
+        borders = borderContainer.GetComponentsInChildren<Image>();
     }
 
     void OnEnable()
@@ -106,8 +106,6 @@ public class HourglassController : MonoBehaviour
         if (coloredBorders)
         {
             Color inter = ColorController.getColorFromType(newCol);
-            Debug.Log(inter);
-            Debug.Log(borders.Length);
 
             foreach (Image image in borders)
             {
@@ -129,6 +127,9 @@ public class HourglassController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // no point in calculating or updating stuff that didn't change
+        if (ColorController.instance.IsPaused)
+            return;
         updateChunks();
     }
 

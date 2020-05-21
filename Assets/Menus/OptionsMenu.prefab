@@ -2437,6 +2437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861209154ef747ecfaccb39fd6504e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useWASDButton: {fileID: 1228815612955782347}
 --- !u!1 &5037461432811948149
 GameObject:
   m_ObjectHideFlags: 0
