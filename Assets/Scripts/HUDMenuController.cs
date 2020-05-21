@@ -11,12 +11,13 @@ public class HUDMenuController : MonoBehaviour
     [SerializeField] private string mainMenuSceneName = "MainMenu";
     [SerializeField] private GameObject pauseMenu = null;
     [SerializeField] private GameObject endGameMenu = null;
+    [SerializeField] private GameObject loadingText = null;
     private int fullObjectiveCount = 0;
     private int finalObjectiveCount = 0;
     private int currentFinalCaught = 0;
 
     [SerializeField] private Text endFinalScoreText = null;
-    [SerializeField] private Text endTimeText = null;
+    [SerializeField] private Text[] timeTexts = null;
 
     public static void addObjective(bool isFinal = false)
     {
@@ -32,13 +33,8 @@ public class HUDMenuController : MonoBehaviour
             instance.triggerEndOfGame();
     }
 
-    public void triggerEndOfGame()
+    public void setTimeText()
     {
-        ColorController.instance.IsPaused = true;
-        endGameMenu.SetActive(true);
-
-        endFinalScoreText.text = "You collected " + ScoreManager.Score.ToString() + " out of " + fullObjectiveCount.ToString() + " Christmas trees!";
-
         float gameTime = ColorController.instance.GameTimer;
         int seconds = (int) (gameTime % 60);
         int minutes = (int) ((gameTime / 60f) % 60);
@@ -51,11 +47,33 @@ public class HUDMenuController : MonoBehaviour
             timeText += "" + minutes.ToString() + ":";
         timeText += "" + seconds.ToString();
 
-        endTimeText.text = timeText;
+        foreach (Text el in timeTexts)
+        {
+            el.text = timeText;
+        }
+    }
+
+    public void triggerEndOfGame()
+    {
+        ColorController.instance.IsPaused = true;
+        endGameMenu.SetActive(true);
+
+        endFinalScoreText.text = "You collected " + ScoreManager.Score.ToString() + " out of " + fullObjectiveCount.ToString() + " Christmas trees!";
+
+        setTimeText();
+    }
+
+    public void triggerPauseMenu()
+    {
+        ColorController.instance.IsPaused = true;
+        pauseMenu.SetActive(true);
+
+        setTimeText();
     }
 
     public void toMainMenu()
     {
+        loadingText.SetActive(true);
         SceneManager.LoadSceneAsync(mainMenuSceneName);
     }
 
@@ -71,7 +89,9 @@ public class HUDMenuController : MonoBehaviour
 
     public void restartGame()
     {
-        // NOT async because we want to make sure every script is properly disabled.
+        loadingText.SetActive(true);
+
+        // not async because we want to make sure every script is properly disabled.
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -79,6 +99,14 @@ public class HUDMenuController : MonoBehaviour
     {
         //to make sure the menus are closed
         resumeGame();
+    }
+
+    void Update()
+    {
+        if (GameInputManager.getKeyDown(GameInputManager.InputType.Pause))
+        {
+            triggerPauseMenu();
+        }
     }
     
     void OnEnable()

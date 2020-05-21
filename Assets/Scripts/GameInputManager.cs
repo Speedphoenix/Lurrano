@@ -8,7 +8,7 @@ public class GameInputManager : MonoBehaviour
 
     public enum InputType
     {
-        Interact, Jump, Sprint, AccelerateTime
+        Interact, Jump, Sprint, AccelerateTime, Pause
     }
 
     public enum Axis
@@ -28,13 +28,16 @@ public class GameInputManager : MonoBehaviour
     [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
     [SerializeField] private KeyCode interactKey = KeyCode.E;
     [SerializeField] private KeyCode accelerateKey = KeyCode.LeftShift;
+    [SerializeField] private KeyCode pauseKey = KeyCode.P;
 
     public static bool IsWASD {
-        get {
+        get
+        {
             return isWASD;
         }
 
-        set {
+        set
+        {
             isWASD = value;
         }
     }
@@ -54,6 +57,9 @@ public class GameInputManager : MonoBehaviour
 
             case InputType.AccelerateTime:
                 return accelerateKey;
+
+            case InputType.Pause:
+                return pauseKey;
             
             default:
                 return KeyCode.None;
@@ -88,7 +94,7 @@ public class GameInputManager : MonoBehaviour
                 else
                     inputName = instance.WASDHorizontalInputName;
                 break;
-                
+
             default:
                 break;
         }
