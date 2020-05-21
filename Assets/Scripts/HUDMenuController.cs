@@ -42,10 +42,10 @@ public class HUDMenuController : MonoBehaviour
 
         string timeText = "Time: ";
         if (hours > 0)
-            timeText += "" + hours.ToString() + ":";
+            timeText += "" + hours.ToString() + "h ";
         if (minutes > 0 || hours > 0)
-            timeText += "" + minutes.ToString() + ":";
-        timeText += "" + seconds.ToString();
+            timeText += "" + minutes.ToString() + "m ";
+        timeText += "" + seconds.ToString() + "s";
 
         foreach (Text el in timeTexts)
         {
