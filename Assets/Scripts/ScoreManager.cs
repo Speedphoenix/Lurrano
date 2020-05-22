@@ -32,8 +32,7 @@ public class ScoreManager : MonoBehaviour
     public void incrementScore(bool isFinal)
     {
         addToScore(scoreIncrement);
-        if (isFinal)
-            HUDMenuController.caughtNewFinal();
+        HUDMenuController.Instance.collectedObjective(isFinal);
     }
 
     void OnEnable()
