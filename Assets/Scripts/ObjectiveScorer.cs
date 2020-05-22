@@ -18,12 +18,9 @@ public class ObjectiveScorer : MonoBehaviour
         HUDMenuController.addObjective(isFinal);
     }
 
-    void OnTriggerStay(Collider otherCollider)
+    void Update()
     {
-        // we can use the colliders from the other purposes too
-        if (otherCollider.gameObject.tag != "Player" && otherCollider.transform.parent.gameObject.tag != "Player")
-            return;
-        if (GameInputManager.getKeyDown(GameInputManager.InputType.Interact))
+        if (PlayerButtonTriggerer.CurrentlyInView == this.gameObject && GameInputManager.getKeyDown(GameInputManager.InputType.Interact))
             externalAction();
     }
     

@@ -54,6 +54,9 @@ public class InteractButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerButtonTriggerer.CurrentlyInView == this.gameObject)
+            decideInteraction();
+
         if (isInteracting && !push)
         {
             externalAction();
@@ -80,11 +83,8 @@ public class InteractButton : MonoBehaviour
     {
     }
 
-    void OnTriggerStay(Collider otherCollider)
+    private void decideInteraction()
     {
-        if (otherCollider.gameObject.tag != "Player")
-            return;
-
         if (GameInputManager.getKeyDown(GameInputManager.InputType.Interact))
         {
             isInteracting = true;
@@ -93,6 +93,13 @@ public class InteractButton : MonoBehaviour
         {
             isInteracting = false;
         }
+    }
+
+    void OnTriggerStay(Collider otherCollider)
+    {
+        if (otherCollider.gameObject.tag != "Player")
+            return;
+        decideInteraction();
     }
 
 }

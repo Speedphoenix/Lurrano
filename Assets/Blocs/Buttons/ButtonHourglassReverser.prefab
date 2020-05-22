@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1256904346708948819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202185431929890762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2245cee11d7eda44a064ac3e0f02c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSourceVolume: 0.05
+  timerDuration: 35
+  button: {fileID: 6206969943264714692}
+  pressureSoundSource: {fileID: 529174058249966652}
+  action: 0
+--- !u!1001 &8162086345687105336
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2808257715893883294, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 531ee3f4cabb2116cb93bc7e91d5353c, type: 2}
+    - target: {fileID: 7055604660705057010, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_Name
+      value: ButtonHourglassReverser
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057011, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055604660705057022, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 531ee3f4cabb2116cb93bc7e91d5353c, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c8d8a3128b2262d5bd76952e9acc02e, type: 3}
+--- !u!1 &1202185431929890762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7055604660705057010, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8162086345687105336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &529174058249966652 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8511116418705107716, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8162086345687105336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6206969943264714692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2838983065314730236, guid: 5c8d8a3128b2262d5bd76952e9acc02e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8162086345687105336}
+  m_PrefabAsset: {fileID: 0}
