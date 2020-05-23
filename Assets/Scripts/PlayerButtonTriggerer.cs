@@ -23,10 +23,7 @@ public class PlayerButtonTriggerer : MonoBehaviour
         Debug.DrawRay(cameraTransform.position, cameraTransform.forward * interactionDistance);
 
         if (Physics.Raycast(interactRay, out hit, interactionDistance))
-        {
             currentlyInView = hit.collider.gameObject;
-            Debug.Log(hit.collider.gameObject.name);
-        }
         else
             currentlyInView = null;
 

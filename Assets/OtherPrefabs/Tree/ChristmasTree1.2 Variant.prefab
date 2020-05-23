@@ -9,7 +9,8 @@ AudioSource:
   m_GameObject: {fileID: 7033976448999452592}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243920156992327750, guid: 88dabb32aab292a1a9e8066f2f8ff7c2,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 06f79fc56e30e04418600ade416e412c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -103,11 +104,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5840001192137269014, guid: 305e38ce20ce3cc6293be7a3229d0ab1,
-        type: 3}
-      propertyPath: m_Name
-      value: ChristmasTree1.2 Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 2362949721002080920, guid: 305e38ce20ce3cc6293be7a3229d0ab1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,6 +173,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840001192137269014, guid: 305e38ce20ce3cc6293be7a3229d0ab1,
+        type: 3}
+      propertyPath: m_Name
+      value: ChristmasTree1.2 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 305e38ce20ce3cc6293be7a3229d0ab1, type: 3}

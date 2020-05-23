@@ -13,25 +13,73 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private AnimationCurve jumpFallOff;
     [SerializeField] private float jumpMultiplier;
     [SerializeField] private float sprintMultiplier;
-    public AudioSource footsteps;
+    
+    public AudioSource footsteps = null;
+    [SerializeField] private float runningPitchIncrease = 1;
+    private float baseAudioPitch;
+    private float fastAudioPitch;
 
     private bool isJumping;
     private bool isSprinting;
+    private bool isMoving = false;
 
     public static Collider MainPlayerCollider
     {
         get { return instance.mainPlayerCollider; }
     }
 
+    void Start()
+    {
+        baseAudioPitch = footsteps.pitch;
+        fastAudioPitch = baseAudioPitch + runningPitchIncrease;
+    }
+
     void OnEnable()
     {
         instance = this;
+        ColorController.onPause += onPause;
+        ColorController.onUnPause += onUnPause;
     }
 
     void OnDisable()
     {
         if (instance != null)
             instance = null;
+        ColorController.onPause -= onPause;
+        ColorController.onUnPause -= onUnPause;
+    }
+
+    private void onPause()
+    {
+        footsteps.Stop();
+    }
+
+    private void onUnPause()
+    {
+        setAudio();
+    }
+
+    private void setAudio()
+    {
+        if (footsteps.isPlaying)
+        {
+            if (isJumping || !isMoving)
+                footsteps.Stop();
+            else if (footsteps.pitch == baseAudioPitch && isSprinting)
+                footsteps.pitch = fastAudioPitch;
+            else if (footsteps.pitch == fastAudioPitch && !isSprinting)
+                footsteps.pitch = baseAudioPitch;
+        }
+        else
+        {
+            if (isJumping || !isMoving)
+                return;
+            else if (isSprinting)
+                footsteps.pitch = fastAudioPitch;
+            else
+                footsteps.pitch = baseAudioPitch;
+            footsteps.Play();
+        }
     }
 
     private void Awake()
@@ -65,11 +113,16 @@ public class PlayerMove : MonoBehaviour
             rightMovement = transform.right * horizInput * sprintMultiplier;
         }
 
+        if (vertInput != 0 || horizInput != 0)
+            isMoving = true;
+        else
+            isMoving = false;
 
         charController.SimpleMove(fowardMovement + rightMovement);
 
         JumpInput();
         SprintInput();
+        setAudio();
     }
 
     private void JumpInput()

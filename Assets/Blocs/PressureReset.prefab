@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ccecae2e510bb4fbfb5c5ec678aa12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorName: 0
   pressureSoundSource: {fileID: 3836129074949113816}
   pressureSoundUp: {fileID: 8300000, guid: 51a99b8a9603cd6458b3309434ced935, type: 3}
   AudioSourceVolume: 0.03
@@ -274,7 +275,8 @@ AudioSource:
   m_GameObject: {fileID: 4074189092419152096}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243068709476842332, guid: 88dabb32aab292a1a9e8066f2f8ff7c2,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 0a2921aeef3ef314693cebf164cac862, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -288,7 +290,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
