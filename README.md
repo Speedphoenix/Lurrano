@@ -2,6 +2,8 @@
 
 [All releases here](https://github.com/Speedphoenix/Radiant-Maze/releases/latest)
 
+[WebGL version hosted here](https://radiantmaze.jeanteur.dev/) and [here](https://simmer.io/@Speedphoenix/radiant-maze)
+
 ---
 
 This is a first person puzzle game developped in an academic setting
