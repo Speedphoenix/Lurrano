@@ -12,6 +12,14 @@ public class PlayerLook : MonoBehaviour
 
     private float XAxisClamp;
 
+    void Start()
+    {
+        // because WebGL has a bad mouse sensitivity...
+        #if UNITY_WEBGL
+            mouseSensitivity /= 2;
+        #endif
+    }
+
     private void OnEnable()
     {
         LockCursor();
