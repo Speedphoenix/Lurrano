@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     static PlayerMove instance = null;
-    [SerializeField] private Collider mainPlayerCollider;
-    [SerializeField] private float playerSpeed;
+    [SerializeField] private Collider mainPlayerCollider = null;
+    [SerializeField] private float playerSpeed = 15f;
 
     private CharacterController charController;
 
-    [SerializeField] private AnimationCurve jumpFallOff;
-    [SerializeField] private float jumpMultiplier;
-    [SerializeField] private float sprintMultiplier;
+    [SerializeField] private AnimationCurve jumpFallOff = null;
+    [SerializeField] private float jumpMultiplier = 8f;
+    [SerializeField] private float sprintMultiplier = 1.75f;
     
     public AudioSource footsteps = null;
     [SerializeField] private float runningPitchIncrease = 1;
