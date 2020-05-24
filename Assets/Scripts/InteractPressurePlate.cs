@@ -5,8 +5,6 @@ using ColorType = ColorController.ColorType;
 
 public class InteractPressurePlate : MonoBehaviour
 {
-    [SerializeField] private ColorType colorName = ColorType.NoColor;
-
     private Collider playerCollider;
     private bool isInteracting;
     private bool push;
@@ -46,10 +44,9 @@ public class InteractPressurePlate : MonoBehaviour
         }
     }
 
-    // this could be overridden by different pressure plates
+    // this is be overridden by different pressure plates
     protected virtual void externalAction()
     {
-        ColorController.instance.setMainCol(colorName);
     }
 
     void OnTriggerEnter(Collider otherCollider)

@@ -31,6 +31,8 @@ public class HUDMenuController : MonoBehaviour
 
     private string prefKeyAny = "highscoreany";
     private string prefKeyfull = "highscorefull";
+
+    private bool isPaused = false;
     
 
     public static void addObjective(bool isFinal = false)
@@ -172,6 +174,7 @@ public class HUDMenuController : MonoBehaviour
     {
         ColorController.instance.IsPaused = true;
         pauseMenu.SetActive(true);
+        isPaused = true;
 
         setTimeText();
     }
@@ -188,6 +191,8 @@ public class HUDMenuController : MonoBehaviour
             pauseMenu.SetActive(false);
         if (endGameMenu != null)
             endGameMenu.SetActive(false);
+        
+        isPaused = false;
 
         ColorController.instance.IsPaused = false;
     }
@@ -210,7 +215,10 @@ public class HUDMenuController : MonoBehaviour
     {
         if (GameInputManager.getKeyDown(GameInputManager.InputType.Pause))
         {
-            triggerPauseMenu();
+            if (!isPaused)
+                triggerPauseMenu();
+            else
+                resumeGame();
         }
     }
     

@@ -29,6 +29,7 @@ public class GameInputManager : MonoBehaviour
     [SerializeField] private KeyCode interactKey = KeyCode.E;
     [SerializeField] private KeyCode accelerateKey = KeyCode.LeftShift;
     [SerializeField] private KeyCode pauseKey = KeyCode.P;
+    [SerializeField] private KeyCode pauseKey2 = KeyCode.Escape;    
 
     public static bool IsWASD {
         get
@@ -68,11 +69,15 @@ public class GameInputManager : MonoBehaviour
 
     public static bool getKeyDown(InputType which)
     {
+        if (which == InputType.Pause)
+            return Input.GetKeyDown(instance.getKey(which)) || Input.GetKeyDown(instance.pauseKey2);
         return Input.GetKeyDown(instance.getKey(which));
     }
 
     public static bool getKeyUp(InputType which)
     {
+        if (which == InputType.Pause)
+            return Input.GetKeyUp(instance.getKey(which)) || Input.GetKeyUp(instance.pauseKey2);
         return Input.GetKeyUp(instance.getKey(which));
     }
 
