@@ -318,7 +318,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243462179098374700, guid: 88dabb32aab292a1a9e8066f2f8ff7c2,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: c95e73f645fa0bd4da983aecb6ed3218, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7194687884393003422}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e8f36f5cd461954c84b244e9683132c, type: 3}
   m_Name: 
