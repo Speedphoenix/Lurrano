@@ -2,7 +2,7 @@
 
 [All releases here](https://github.com/Speedphoenix/Radiant-Maze/releases/latest)
 
-[WebGL version hosted here](https://radiantmaze.jeanteur.dev/) and [here](https://simmer.io/@Speedphoenix/radiant-maze)
+[WebGL version hosted here](https://radiantmaze.jeanteur.dev/)
 
 ---
 
