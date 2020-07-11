@@ -2,6 +2,10 @@
 
 [All releases here](https://github.com/Speedphoenix/Radiant-Maze/releases/latest)
 
+:warning: **For Mac users:**  
+To launch the game right click on the `.app` file and select `Open`, then `Validate`
+> Trying to install the game normally may result in errors because the developpers are not trusted by Apple.
+
 [WebGL version hosted here](https://radiantmaze.jeanteur.dev/)
 
 ---
