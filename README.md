@@ -6,7 +6,7 @@
 To launch the game right click on the `.app` file and select `Open`, then `Validate`
 > Trying to install the game normally may result in errors because the developpers are not trusted by Apple.
 
-[WebGL version hosted here](https://radiantmaze.jeanteur.dev/)
+WebGL version hosted [here](https://radiantmaze.jeanteur.dev/) and [here](https://simmer.io/@Speedphoenix/radiant-maze).
 
 ---
 
